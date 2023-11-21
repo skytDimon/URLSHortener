@@ -65,16 +65,16 @@ def get_base_page(request: Request):
 app.include_router(router)
 
 
-@app.get("/items/{short_id}", response_class=HTMLResponse)
-def redirect_url(short_id: str):
-    dll.getDataFromDatabase.argtypes = [ctypes.c_char_p]
-    dll.getDataFromDatabase.restype = ctypes.c_char_p
+# @app.get("/items/{short_id}", response_class=HTMLResponse)
+# def redirect_url(short_id: str):
+#     dll.getDataFromDatabase.argtypes = [ctypes.c_char_p]
+#     dll.getDataFromDatabase.restype = ctypes.c_char_p
 
-    # Вызов функции из библиотеки C++ и получение результата в Python
-    redirectable_url_bytes = dll.getDataFromDatabase(("http://127.0.0.1:8000/" + short_id).encode())
-    redirectable_url_str = redirectable_url_bytes.decode("utf-8")
+#     # Вызов функции из библиотеки C++ и получение результата в Python
+#     redirectable_url_bytes = dll.getDataFromDatabase(("http://127.0.0.1:8000/" + short_id).encode())
+#     redirectable_url_str = redirectable_url_bytes.decode("utf-8")
 
-    return RedirectResponse(redirectable_url_str, status_code=302)
+#     return RedirectResponse(redirectable_url_str, status_code=302)
 
 
 def url(longURl):
