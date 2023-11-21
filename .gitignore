@@ -1,0 +1,5 @@
+# Default ignored files
+/env/
+.env
+/__pycache__/
+/.idea/

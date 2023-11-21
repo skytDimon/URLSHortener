@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Сокращатель ссылок</title>
+  <meta charset="UTF-8">
+
+</head>
+
+<body>
+  <div class="forma">
+    <form action="/result" method="post">
+      <h2>Project Shortener</h2>
+      <div class="user-box">
+        <input type="text" name="value" id="value">
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+
+    <p>User URL: {{ user_value }}</p>
+    <p>Short URL: {{ processed_value }}</p>
+  </div>
+</body>
