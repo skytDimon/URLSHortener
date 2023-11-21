@@ -39,7 +39,7 @@ from fastapi import FastAPI, Request, Form, APIRouter
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.responses import RedirectResponse, HTMLResponse
-from pages.router import router as router_pages
+
 
 # Загрузка библиотеки C++
 dll = ctypes.cdll.LoadLibrary("./ProjectShorter.dll")
