@@ -23,6 +23,19 @@ body {
   border-radius: 10px;
 }
 
+
+.size {
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  padding: 5px; /* Поля */
+  text-overflow: ellipsis; /* Многоточие */
+ }
+ .size:hover {
+  background: #f0f0f0; /* Цвет фона */
+  white-space: normal; /* Обычный перенос текста */
+ }
+
+
 .forma h2 {
   margin: 0 0 30px;
   padding: 0;
@@ -47,6 +60,7 @@ input:-webkit-autofill {
   background: transparent;
 }
 
+
 input[type="submit"] {
   width: 150px;
   height: 40px;
@@ -58,6 +72,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 input[type="submit"]:hover {
   background: #03e9f4;

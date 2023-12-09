@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from fastapi_users_db_sqlalchemy import SQLAlchemyBaseUserTable
-from sqlalchemy import (JSON, TIMESTAMP, Boolean, Column, ForeignKey, Integer,
+from sqlalchemy import (TIMESTAMP, Boolean, Column, Integer,
                         MetaData, String, Table)
 
 from src.database import Base
@@ -21,8 +21,9 @@ user = Table(
     Column("is_verified", Boolean, default=False, nullable=False),
 )
 
-
 class User(SQLAlchemyBaseUserTable[int], Base):
+    __tablename__ = "user"
+
     id = Column(Integer, primary_key=True)
     email = Column(String, nullable=False)
     username = Column(String, nullable=False)

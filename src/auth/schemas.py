@@ -1,4 +1,3 @@
-from datetime import datetime, date
 from typing import Optional
 
 from fastapi_users import schemas
